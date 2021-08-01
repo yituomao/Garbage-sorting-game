@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<!-- 开始界面 -->
+		<div class="container zsk">
+			<div class="left">
+				<div onclick="showLJ(1)">可回收</div>
+				<div onclick="showLJ(0)">厨余垃圾</div>
+				<div onclick="showLJ(2)">有害垃圾</div>
+				<div onclick="showLJ(3)">其他垃圾</div>
+			</div>
+			<div class="right">
+				<div class="title">垃圾介绍</div>
+				<div class="cont"></div>
+				<a href="index.html" class="back">返回</a>
+			</div>
+		</div>
+
+		<script>
+			var lj = [{
+					name: '厨余垃圾',
+					desc: '厨余垃圾是有机垃圾的一种，分为熟厨余垃圾zhi和生厨余垃圾dao。熟厨余垃圾包括剩zhuan菜、剩饭、菜叶；生shu厨余垃圾包括果皮、蛋壳、茶渣、骨、扇贝，泛指家庭生活饮食中所需用的来源生料及成品或残留物。',
+					img:['./img/cy/26.png','./img/cy/27.png','./img/cy/28.png','./img/cy/29.png','./img/cy/30.png']
+				},
+				{
+					name: '可回收垃圾',
+					desc: '可回收物指适宜回收利用和资源化利用的生活废弃物   。可回收物主要品种包括：废纸、废塑料、废金属、废包装物、废旧纺织物、废弃电器电子产品、废玻璃、废纸塑铝复合包装等。',
+					img:['./img/khs/13.png','./img/khs/14.png','./img/khs/15.png','./img/khs/16.png','./img/khs/17.png']
+				},
+				{
+					name: '有害垃圾',
+					desc: '有害垃圾指对人体健康或者自然环境造成直接或者潜在危害的生活废弃物。常见的有害垃圾包括废灯管、废油漆、杀虫剂、废弃化妆品、过期药品、废电池、废灯泡、废水银温度计等，有害垃圾需按照特殊正确的方法安全处理。',
+					img:['./img/yh/13.png','./img/yh/14.png','./img/yh/11.png','./img/yh/6.png','./img/yh/7.png']
+				},
+				{
+					name: '其他垃圾',
+					desc: '其他垃圾指危害比较小，没有再次利用的价值的垃圾，如建筑垃圾，生活垃圾等，一般都采取填埋、焚烧、卫生分解等方法处理，部分还可以使用生物分解的方法解决，如放蚯蚓等。其他垃圾是可回收物、厨余垃圾、有害垃圾剩余下来的一种垃圾种类。',
+					img:['./img/bkhs/3.png','./img/bkhs/4.png','./img/bkhs/5.png','./img/bkhs/6.png','./img/bkhs/7.png']
+				}
+			]
+
+			function showLJ(n){
+				let imgs=lj[n].img.map(item=>{
+					return '<img src="'+item+'" />'
+				}).join('')
+				document.getElementsByClassName('title')[0].innerHTML = lj[n].name + '介绍'
+				document.getElementsByClassName('cont')[0].innerHTML = lj[n].desc+'<div class="case">'+imgs+'</div>'
+			}
+			showLJ(1)
+		</script>
+	</body>
+</html>

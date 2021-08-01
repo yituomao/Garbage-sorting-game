@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<!-- 游戏 -->
+		<audio src="music/bg.mp3" id="bgm" loop="loop">
+			当前浏览器不支持audio
+		</audio>
+		<div class="container">
+			<div class="p1">
+				<div class="p1-cont">
+					<div onclick="init(1)">
+						初级
+						<div class="star sp1">
+							<img src="img/xx1.png">
+							<img src="img/xx1.png">
+							<img src="img/xx1.png">
+						</div>
+					</div>
+					<div onclick="init(2)">
+						中级
+						<div class="star sp2">
+							<img src="img/xx1.png">
+							<img src="img/xx1.png">
+							<img src="img/xx1.png">
+						</div>
+					</div>
+					<div onclick="init(3)">
+						高级
+						<div class="star sp3">
+							<img src="img/xx1.png">
+							<img src="img/xx1.png">
+							<img src="img/xx1.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="game-cont">
+				<div class="bar">
+					<div class="time"></div>
+					
+					<div class="wrong">失败次数：0</div>
+					<div class="point">
+						得分：0
+						<!-- <img src="img/xx2.png" >
+						<img src="img/xx2.png" >
+						<img src="img/xx2.png" > -->
+					</div>
+					<div class="music-control" onclick="bgmSound()">
+						关闭声音
+					</div>
+					<div class="stop-btn">
+						<span onclick="stopGame()"><img src="img/stop.png"></span>
+					</div>
+				</div>
+
+				<div class="lj-box"></div>
+				<div class="fail-box">
+					<h2>游戏失败</h2>
+					<p>您本次得分为：</p>
+					<div></div>
+					<button type="button">返回</button>
+				</div>
+
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/index.js"></script>
+		<script>
+			let p1 = localStorage.getItem('p1')
+			let p2 = localStorage.getItem('p2')
+			let p3 = localStorage.getItem('p3')
+			// console.log(p2.split(','))
+			if (p1) {
+				let itext = ''
+				p1.split(',').forEach(item => {
+					itext += '<img src="' + item + '" />'
+				})
+				$('.sp1').html(itext)
+			}
+			if (p2) {
+				let itext = ''
+				p2.split(',').forEach(item => {
+					itext += '<img src="' + item + '" />'
+				})
+				$('.sp2').html(itext)
+			}
+			if (p3) {
+				let itext = ''
+				p3.split(',').forEach(item => {
+					itext += '<img src="' + item + '" />'
+				})
+				$('.sp3').html(itext)
+			}
+		</script>
+	</body>
+</html>

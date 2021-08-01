@@ -1,0 +1,271 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1200px;
+	height: 700px;
+	background: #f5f5f5;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	background: url(../img/bg1.jpg);
+	background-size: 100% 100%;
+}
+
+.title {
+	font-size: 80px;
+	line-height: 200px;
+	font-family: '宋体';
+	color: brown;
+}
+
+.p1 {
+	padding-top: 300px;
+}
+
+.btn-group {
+	width: 40%;
+	margin: 0 auto;
+}
+
+.btn-group button {
+	width: 100%;
+	height: 60px;
+	font-weight: 600;
+	font-size: 24px;
+	box-shadow: 0px 0px 20px #fff;
+	margin: 10px 0;
+	background: #ffc300;
+	border: none;
+	border-radius: 100px;
+	color: white;
+	outline: none;
+}
+
+.info {
+	position: absolute;
+	bottom: 0;
+	width: 40%;
+	left: 30%;
+	line-height: 2;
+	color: #555;
+	text-align: center;
+	border: 1px solid #A52A2A;
+	bottom: 10px;
+}
+
+/* 知识库页面 */
+.zsk {
+	display: flex;
+	background: url(../img/bg12.jpg);
+	background-size: cover;
+}
+
+.left {
+	width: 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.left div {
+	font-size: 30px;
+	border: 1px solid #b6b6b6;
+	flex: 1;
+	background: #ff2b18;
+	color: white;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	/* 居中 */
+}
+
+.right {
+	flex: 1;
+	background: url(../img/bg2.jpg.png) no-repeat center;
+	background-size: 100% 100%;
+	padding: 9% 15%;
+	font-size: 20px;
+	font-family: '华文彩云';
+	color: #CC5E20;
+	line-height: 2;
+	font-weight: 600;
+}
+
+.right .title {
+	color: #318C49;
+	line-height: 1;
+}
+
+.back {
+	position: absolute;
+	right: 5%;
+	bottom: 5%;
+	text-decoration: none;
+}
+
+.back:hover {
+	color: firebrick;
+}
+
+.p1-cont {
+	color: white;
+	font-size: 40px;
+
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.p1-cont div {
+	margin: 10px;
+	line-height: 180px;
+	background: #ffffff77;
+	cursor: pointer;
+	flex: 1;
+}
+
+.p1-cont div:hover {
+	color: #000000;
+	background: #00000017;
+}
+
+.p1-cont .star {
+	line-height: 40px;
+	background: none;
+}
+
+.game-cont {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: url(../img/cd.jpg);
+	overflow: hidden;
+	display: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@keyframes bgmove {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 100% 100%;
+	}
+}
+
+.lj-box {
+	position: absolute;
+	/* animation: 30s bgmove linear; */
+	/* background: #00000033; */
+
+}
+
+.lj-box img {
+	border: none;
+	outline: none;
+}
+
+.bar {
+	display: flex;
+	/* background: #bbb; */
+	justify-content: space-around;
+	color: white;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: 600;
+	text-shadow: 1px 1px 5px #000;
+	z-index: 100000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.hides::before {
+	content: '';
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: #ffffff22;
+	display: inline-block;
+	left: 0;
+	top: 0;
+}
+
+.bar div {
+	cursor: pointer;
+}
+
+.fail-box {
+	background: #fff;
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	height: 50%;
+	top: 25%;
+	z-index: 1000000;
+	border: 5px solid #1187C4;
+	font-size: 24px;
+	color: orangered;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	line-height: 2;
+}
+
+.fail-box img {
+	width: 100px;
+}
+
+.fail-box::before {
+	content: '';
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: #ffffff22;
+	display: inline-block;
+	left: 0;
+	top: 0;
+}
+
+.fail-box button {
+	width: 40%;
+	height: 40px;
+	background-color: #1187C4;
+	border: none;
+	color: white;
+}
+
+.star {
+	display: flex;
+}
+
+.star img {
+	width: 30%;
+}
+
+.stop-btn img {
+	width: 50px;
+	vertical-align: middle;
+}
+.case img{
+	width: 120px;
+}
+.lj-box div{
+	background-size: 100% 100%;
+}
